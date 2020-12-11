@@ -1,7 +1,12 @@
-version: '1.0'
+version: 1.0.1
 history:
-  '1.0':
+  1.0.1:
+    date: '2020-12-11'
+    title: Text replace
+    description: 'Replace character & in text variable.'
+  1.0.0:
     date: '2019-09-10'
+    title: First version
     description: 'Manifest created.'
 plugin: {  }
 sys:

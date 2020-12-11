@@ -5,6 +5,13 @@ class PluginSlackWebhook_v1{
   public $text = null;
   public $icon_emoji = ':red_card:';
   public function send(){
+    /**
+     * Replace.
+     */
+    $this->handel_text();
+    /**
+     * 
+     */
     $data = "payload=" . json_encode(array(
             "channel"       =>  "#{$this->channel}",
             "text"          =>  $this->text,
@@ -17,5 +24,9 @@ class PluginSlackWebhook_v1{
     $result = curl_exec($ch);
     curl_close($ch);
     return $result;
+  }
+  private function handel_text(){
+    $this->text = str_replace('&', '[AND]', $this->text);
+    return null;
   }
 }
