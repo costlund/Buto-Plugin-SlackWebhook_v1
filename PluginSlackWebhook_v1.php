@@ -26,7 +26,7 @@ class PluginSlackWebhook_v1{
     return $result;
   }
   private function handel_text(){
-    $this->text = str_replace('&', '[AND]', $this->text);
+    $this->text = wfPhpfunc::str_replace('&', '[AND]', $this->text);
     return null;
   }
 }
